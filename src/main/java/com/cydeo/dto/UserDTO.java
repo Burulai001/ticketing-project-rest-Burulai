@@ -1,6 +1,7 @@
 package com.cydeo.dto;
 
 import com.cydeo.enums.Gender;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -39,6 +40,7 @@ public class UserDTO {
     private String passWord;
 
     @NotNull
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String confirmPassWord;
 
     private boolean enabled;
